@@ -1,0 +1,37 @@
+{
+  "name": "emailit-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the Emailit email platform",
+  "type": "module",
+  "bin": {
+    "emailit-mcp": "src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "emailit",
+    "mcp",
+    "email",
+    "api",
+    "model-context-protocol"
+  ],
+  "homepage": "https://emailit.com",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "fastify": "^5.3.3",
+    "minimist": "^1.2.8",
+    "zod": "^3.25.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emailit/emailit-mcp.git"
+  }
+}
