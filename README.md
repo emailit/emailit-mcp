@@ -15,7 +15,7 @@ An MCP server for the [Emailit](https://emailit.com/) platform. Send emails, man
 
 ## Setup
 
-Create a free Emailit account and [create an API key](https://emailit.com/dashboard). To send to addresses outside of your own, you'll need to [verify your domain](https://emailit.com/dashboard).
+Create a free Emailit account and [create an API key](https://emailit.com/docs/guides/how-to-get-an-api-key/). To send to addresses outside of your own, you'll need to [verify your domain](https://emailit.com/docs/guides/creating-a-domain/).
 
 ## Usage
 
