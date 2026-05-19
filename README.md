@@ -26,7 +26,7 @@ The server supports two transport modes: stdio (default) and HTTP.
 #### Claude Code
 
 ```bash
-claude mcp add emailit -e EMAILIT_API_KEY=em_xxx -- npx -y emailit-mcp
+claude mcp add emailit -e EMAILIT_API_KEY=em_xxx -- npx -y @emailit/emailit-mcp
 ```
 
 #### Cursor
@@ -72,7 +72,7 @@ Run the server over HTTP for remote or web-based integrations. In HTTP mode, eac
 Start the server:
 
 ```bash
-npx -y emailit-mcp --http --port 3000
+npx -y @emailit/emailit-mcp --http --port 3000
 ```
 
 The server will listen on `http://127.0.0.1:3000` and expose the MCP endpoint at `/mcp` using Streamable HTTP.
@@ -101,7 +101,7 @@ claude mcp add emailit --transport http http://127.0.0.1:3000/mcp --header "Auth
 You can also set the port via the `MCP_PORT` environment variable:
 
 ```bash
-MCP_PORT=3000 npx -y emailit-mcp --http
+MCP_PORT=3000 npx -y @emailit/emailit-mcp --http
 ```
 
 ### Options

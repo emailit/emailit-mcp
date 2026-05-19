@@ -1,5 +1,5 @@
 {
-  "name": "emailit-mcp",
+  "name": "@emailit/emailit-mcp",
   "version": "1.0.0",
   "description": "MCP server for the Emailit email platform",
   "type": "module",
@@ -33,5 +33,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/emailit/emailit-mcp.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
