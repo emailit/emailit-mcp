@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CURRENT_VERSION="2.0.1"
+CURRENT_VERSION="2.0.2"
 
 if [ $# -ge 1 ]; then
     NEW_VERSION="$1"
