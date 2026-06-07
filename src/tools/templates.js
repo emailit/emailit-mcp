@@ -93,9 +93,9 @@ export function addTemplateTools(server, apiClient) {
       inputSchema: {
         per_page: z.number().min(1).max(100).optional().describe('Items per page (default: 25, max: 100).'),
         page: z.number().min(1).optional().describe('Page number (default: 1).'),
-        'filter[name]': z.string().optional().describe('Filter by name (partial match).'),
-        'filter[alias]': z.string().optional().describe('Filter by alias (exact match).'),
-        'filter[editor]': z.enum(['html', 'tiptap', 'dragit']).optional().describe('Filter by editor type.'),
+        filter_name: z.string().optional().describe('Filter by name (partial match).'),
+        filter_alias: z.string().optional().describe('Filter by alias (exact match).'),
+        filter_editor: z.enum(['html', 'tiptap', 'dragit']).optional().describe('Filter by editor type.'),
         sort: z
           .enum(['name', 'alias', 'created_at', 'updated_at', 'published_at'])
           .optional()
@@ -107,9 +107,9 @@ export function addTemplateTools(server, apiClient) {
       const query = {};
       if (params.per_page !== undefined) query.per_page = params.per_page;
       if (params.page !== undefined) query.page = params.page;
-      if (params['filter[name]']) query['filter[name]'] = params['filter[name]'];
-      if (params['filter[alias]']) query['filter[alias]'] = params['filter[alias]'];
-      if (params['filter[editor]']) query['filter[editor]'] = params['filter[editor]'];
+      if (params.filter_name) query['filter[name]'] = params.filter_name;
+      if (params.filter_alias) query['filter[alias]'] = params.filter_alias;
+      if (params.filter_editor) query['filter[editor]'] = params.filter_editor;
       if (params.sort) query.sort = params.sort;
       if (params.order) query.order = params.order;
 

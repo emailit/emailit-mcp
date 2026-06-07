@@ -499,9 +499,9 @@ List all published templates. Supports filtering and sorting.
 |-----------|------|----------|-------------|
 | `per_page` | number | No | Items per page (default: 25, max: 100). |
 | `page` | number | No | Page number (default: 1). |
-| `filter[name]` | string | No | Filter by name (partial match). |
-| `filter[alias]` | string | No | Filter by alias (exact match). |
-| `filter[editor]` | string | No | Filter by editor type. |
+| `filter_name` | string | No | Filter by name (partial match). |
+| `filter_alias` | string | No | Filter by alias (exact match). |
+| `filter_editor` | string | No | Filter by editor type. |
 | `sort` | string | No | Sort field: `name`, `alias`, `created_at`, `updated_at`, `published_at`. |
 | `order` | string | No | Sort order: `asc` or `desc` (default: `desc`). |
 
