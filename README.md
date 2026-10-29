@@ -2,6 +2,8 @@
 
 An MCP server for the [Emailit](https://emailit.com/) platform. Send emails, manage contacts, domains, templates, and more, directly from any MCP client like Claude Desktop, Cursor, or Claude Code.
 
+This package runs locally with an Emailit API key. Emailit also hosts an MCP server at `https://api.emailit.com/mcp` that you sign in to with OAuth, no key or install needed: see [emailit.com/docs/mcp](https://emailit.com/docs/mcp/).
+
 ## Features
 
 - **Emails** — Send, list, get, cancel, update, and retry emails. Supports HTML, plain text, attachments, CC/BCC, reply-to, scheduling, tags, templates, and tracking.
@@ -26,7 +28,7 @@ The server supports two transport modes: stdio (default) and HTTP.
 #### Claude Code
 
 ```bash
-claude mcp add emailit -e EMAILIT_API_KEY=em_xxx -- npx -y @emailit/emailit-mcp
+claude mcp add emailit -e EMAILIT_API_KEY=secret_xxx -- npx -y @emailit/emailit-mcp
 ```
 
 #### Cursor
@@ -38,9 +40,9 @@ Open the command palette and choose "Cursor Settings" > "MCP" > "Add new global 
   "mcpServers": {
     "emailit": {
       "command": "npx",
-      "args": ["-y", "emailit-mcp"],
+      "args": ["-y", "@emailit/emailit-mcp"],
       "env": {
-        "EMAILIT_API_KEY": "em_xxx"
+        "EMAILIT_API_KEY": "secret_xxx"
       }
     }
   }
@@ -56,9 +58,9 @@ Open Claude Desktop settings > "Developer" tab > "Edit Config".
   "mcpServers": {
     "emailit": {
       "command": "npx",
-      "args": ["-y", "emailit-mcp"],
+      "args": ["-y", "@emailit/emailit-mcp"],
       "env": {
-        "EMAILIT_API_KEY": "em_xxx"
+        "EMAILIT_API_KEY": "secret_xxx"
       }
     }
   }
@@ -80,7 +82,7 @@ The server will listen on `http://127.0.0.1:3000` and expose the MCP endpoint at
 #### Claude Code
 
 ```bash
-claude mcp add emailit --transport http http://127.0.0.1:3000/mcp --header "Authorization: Bearer em_xxx"
+claude mcp add emailit --transport http http://127.0.0.1:3000/mcp --header "Authorization: Bearer secret_xxx"
 ```
 
 #### Cursor
@@ -91,7 +93,7 @@ claude mcp add emailit --transport http http://127.0.0.1:3000/mcp --header "Auth
     "emailit": {
       "url": "http://127.0.0.1:3000/mcp",
       "headers": {
-        "Authorization": "Bearer em_xxx"
+        "Authorization": "Bearer secret_xxx"
       }
     }
   }
@@ -136,7 +138,7 @@ npm install
 1. Run locally:
 
 ```bash
-EMAILIT_API_KEY=em_xxx node src/index.js
+EMAILIT_API_KEY=secret_xxx node src/index.js
 ```
 
 1. For HTTP mode:
