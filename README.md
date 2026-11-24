@@ -1,5 +1,7 @@
 # Emailit MCP Server
 
+[![emailit/emailit-mcp MCP server](https://glama.ai/mcp/servers/emailit/emailit-mcp/badges/score.svg)](https://glama.ai/mcp/servers/emailit/emailit-mcp)
+
 An MCP server for the [Emailit](https://emailit.com/) platform. Send emails, manage contacts, domains, templates, and more, directly from any MCP client like Claude Desktop, Cursor, or Claude Code.
 
 This package runs locally with an Emailit API key. Emailit also hosts an MCP server at `https://api.emailit.com/mcp` that you sign in to with OAuth, no key or install needed: see [emailit.com/docs/mcp](https://emailit.com/docs/mcp/).
