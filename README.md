@@ -6,6 +6,8 @@ An MCP server for the [Emailit](https://emailit.com/) platform. Send emails, man
 
 This package runs locally with an Emailit API key. Emailit also hosts an MCP server at `https://api.emailit.com/mcp` that you sign in to with OAuth, no key or install needed: see [emailit.com/docs/mcp](https://emailit.com/docs/mcp/).
 
+[![Emailit MCP connector](https://glama.ai/mcp/connectors/com.emailit/emailit/badges/score.svg)](https://glama.ai/mcp/connectors/com.emailit/emailit)
+
 ## Features
 
 - **Emails** — Send, list, get, cancel, update, and retry emails. Supports HTML, plain text, attachments, CC/BCC, reply-to, scheduling, tags, templates, and tracking.
